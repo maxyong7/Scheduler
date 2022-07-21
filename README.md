@@ -1,4 +1,4 @@
-Link to demo: maxyong.com
+Link to [demo](https://maxyong.com/)
 
 ### <ins> Scheduler to plan out priorities throughout the day
 - Utilized: <br/> 
