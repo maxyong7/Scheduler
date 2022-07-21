@@ -1,0 +1,47 @@
+.space {
+
+    /* border: rgb(48, 253, 185) 1px solid; */
+    /* max-width: 10em; */
+
+}
+
+.mat-icon {
+    cursor: pointer
+}
+
+.time-slot {
+
+    text-align: center;
+    /* border-right: black 1px solid;
+    margin-right: 5px;
+    padding-right: 5px; */
+}
+
+.mat-title {
+    /* border: rebeccapurple 1px solid; */
+    min-height: auto;
+    min-width: 10em;
+    align-items: center;
+    justify-content: center;
+    display: block;
+
+    /* justify-content: flex-start; */
+}
+
+.btn {
+    min-height: 9.15em;
+    box-shadow: none !important;
+    background-color: white;
+    min-width: 90px !important;
+}
+
+
+/* .mat-card {
+    align-items: center;
+    min-height: 8em;
+    min-width: fit-content;
+} */
+
+.app-time-space-item {
+    overflow-y: auto;
+}

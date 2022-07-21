@@ -1,0 +1,107 @@
+{
+  "timeslots": [
+    {
+      "time": "Top Priority",
+      "id": 0
+    },
+    {
+      "time": "Mid Priority",
+      "id": 1
+    },
+    {
+      "time": "Low Priority",
+      "id": 2
+    },
+    {
+      "time": "Notes",
+      "id": 3
+    }
+  ],
+  "timeslotsItem": [
+    {
+      "id": 15.1,
+      "parentId": 0,
+      "time": "Top Priority",
+      "reminder": false,
+      "topic": "Finish client's project",
+      "description": "<ul><li>Team meetup</li><li>Call client</li><li>Submit project</li></ul>",
+      "listCheck": false,
+      "listItem": "5:00 PM",
+      "start": false
+    },
+    {
+      "id": 16.1,
+      "parentId": 1,
+      "time": "Mid Priority",
+      "reminder": false,
+      "topic": "Submit draft article",
+      "description": "<p>Note to self: Double check with Mike prior submitting<span style=\"color: rgb(128, 128, 128);\"><span class=\"ql-cursor\">﻿</span></span></p>",
+      "listCheck": false,
+      "listItem": "10:00 PM",
+      "start": false
+    },
+    {
+      "id": 17.1,
+      "parentId": 1,
+      "time": "Mid Priority",
+      "reminder": false,
+      "topic": "Respond to email",
+      "description": "<p>Respond to Sarah's email</p>",
+      "listCheck": false,
+      "start": false
+    },
+    {
+      "id": 18.1,
+      "parentId": 3,
+      "time": "Notes",
+      "reminder": false,
+      "topic": "Groceries",
+      "description": "<ol><li>Bacon</li><li>Sausage</li><li>Oil</li><li>Butter</li><li>Eggs</li></ol>",
+      "listCheck": false,
+      "start": false
+    },
+    {
+      "id": 19.1,
+      "parentId": 2,
+      "time": "Low Priority",
+      "reminder": false,
+      "topic": "Chores",
+      "description": "<ul><li><s>Wash dishes</s> (Done)</li><li>Do laundry</li><li>Meal prep</li></ul>",
+      "listCheck": false,
+      "start": false
+    },
+    {
+      "id": 20.1,
+      "parentId": 2,
+      "time": "Low Priority",
+      "reminder": false,
+      "topic": "Exercise",
+      "description": "<p>Exercise at the gym</p>",
+      "listCheck": false,
+      "listItem": "6:00 PM",
+      "start": false
+    },
+    {
+      "parentId": 1,
+      "time": "Mid Priority",
+      "reminder": false,
+      "topic": "Meeting with Manager",
+      "description": "<p>Zoom meeting with manager</p><p>Zoom link: zoom.us/abc123</p>",
+      "listCheck": false,
+      "listItem": "1:00 PM",
+      "start": false,
+      "id": 21.1
+    },
+    {
+      "id": 22.1,
+      "parentId": 3,
+      "time": "Notes",
+      "reminder": false,
+      "topic": "Emma's birthday",
+      "description": "<p>Call bakery shop to order a birthday cake</p><p><em>(Shop closes at 5pm)</em></p>",
+      "listCheck": false,
+      "listItem": "5:00 PM",
+      "start": false
+    }
+  ]
+}

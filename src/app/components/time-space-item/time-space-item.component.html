@@ -1,0 +1,63 @@
+<!-- <mat-card class="time-space">
+
+    {{timeslotsItems.topic}}
+    {{timeslotsItems.description}}
+
+    <mat-icon matRipple (click)="onEdit(timeslotsItems)" [inline]="true">edit</mat-icon>
+    <mat-icon matRipple (click)="onDelete(timeslotsItems)" [inline]="true">delete</mat-icon>
+</mat-card> -->
+
+
+
+<div class="mat-card-group" (mouseover)="showButton = true" (mouseleave)="showButton = false">
+    <div class="card c1 " (click)="onClick(timeslotsItems)">
+        <h5 class="mat-card-subtitle">{{timeslotsItems.topic}}</h5>
+
+
+        <p class="card-text" [innerHTML]="timeslotsItems.description">
+            <!-- {{timeslotsItems.description}} -->
+        </p>
+
+    </div>
+    <!-- <div class="mat-card-action" *ngIf="showButton">
+        <button mat-raised-button (click)="onEdit(timeslotsItems)">
+            <mat-icon matRipple [inline]="false">edit
+            </mat-icon>
+        </button>
+
+        <button mat-raised-button (click)="onDelete(timeslotsItems)">
+
+            <mat-icon mat-raised-button color="warn" matRipple [inline]="false">
+                delete</mat-icon>
+        </button>
+    </div> -->
+
+
+    <aside class="overlay">
+
+        <button mat-stroked-button class="btn c3" (click)="onEdit(timeslotsItems)">
+            <mat-icon id="icon" matRipple [inline]="false">edit
+            </mat-icon>
+        </button>
+        <button mat-stroked-button class="btn c4" (click)="onDelete(timeslotsItems)">
+
+            <mat-icon id="icon" matRipple [inline]="false">
+                delete</mat-icon>
+        </button>
+    </aside>
+
+
+    <!-- <aside class="overlay c2" *ngIf="showButton">
+        <ul class="nav-list">
+            <li class="nav-item"><button mat-raised-button (click)="onEdit(timeslotsItems)">
+                    <mat-icon matRipple [inline]="false">edit
+                    </mat-icon>
+                </button></li>
+            <li class="nav-item"><button mat-raised-button (click)="onDelete(timeslotsItems)">
+
+                    <mat-icon mat-raised-button color="warn" matRipple [inline]="false">
+                        delete</mat-icon>
+                </button></li>
+        </ul>
+    </aside> -->
+</div>

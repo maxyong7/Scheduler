@@ -1,0 +1,157 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.connect {
+    color: white;
+    background-color: #1DB954;
+    max-width: fit-content;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+.col {
+    /* border: 1px solid orange; */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* 
+.row {
+    justify-content: left;
+} */
+
+
+.trackTitle {
+    display: block;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.trackArtist {
+    font-weight: 100;
+}
+
+.image {
+    margin-left: 10px;
+}
+
+.btn {
+    max-height: 35px;
+    border-radius: 10px;
+}
+
+.col1 {
+    text-align: right;
+    justify-content: end;
+}
+
+.col2 {
+    max-width: 250px;
+}
+
+.col3 {
+
+    justify-content: left;
+}
+
+.row {
+    background-color: #191414;
+    color: white;
+    /*border-radius: 5px; */
+
+    border-left: 30px solid rgb(31, 151, 61);
+    border-radius: 5px;
+    border-right: 30px solid rgb(31, 151, 61);
+    min-height: 65px;
+    /* position: absolute; */
+    bottom: 0%;
+    width: 100%;
+    margin: 0;
+}
+
+.col0 {
+    justify-content: left;
+    max-width: fit-content;
+    padding: 15px;
+
+}
+
+.playPauseButton {
+    /* min-height: 50px; */
+    margin: 4px;
+    background-color: rgb(31, 151, 61);
+}
+
+.mat-accent .mat-slider-track-fill {
+    background-color: rgb(31, 151, 61) !important;
+}
+
+.thumb-label {
+    background-color: rgb(31, 151, 61) !important;
+
+}
+
+.mat-slider-thumb {
+    background-color: rgb(31, 151, 61) !important;
+}
+
+.volumeDisplay {
+    margin-left: 5px;
+}
+
+#spotify_logo {
+    width: 70px;
+    margin: 11px;
+    /* height: 70px; */
+}
+
+#spotify_logo2 {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    /* margin: 11px */
+}
+
+.trackTitle,
+.trackArtist,
+#spotify_logo2,
+#albumImage:hover {
+    cursor: pointer;
+}
+
+#albumImage {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.form-field-text {
+    color: rgb(221, 220, 220);
+
+}
+
+
+
+::ng-deep .mat-form-field-wrapper {
+    margin-bottom: -1.25em;
+}
+
+.form-field {
+    border-left: #3a3a3a solid 1px;
+    border-right: #3a3a3a solid 1px;
+    /* box-shadow: inset 0px 0px 1px 0px rgb(138, 137, 137); */
+    margin-left: 50px;
+}
+
+::ng-deep .mat-select-arrow {
+    color: white
+}
+
+::ng-deep .mat-select-value {
+    color: rgb(221, 220, 220);
+}

@@ -1,0 +1,84 @@
+<mat-card class="container" *ngIf="editMode || addMode">
+
+    <form [formGroup]="editorForm" (ngSubmit)="onSubmit2(); readMode()">
+        <div class="form-group">
+
+            <!-- Category -->
+            <mat-form-field appearance="fill" id="title t1">
+                <mat-label for="detailCategory">Category</mat-label>
+                <div>
+                    <mat-select formControlName="detailCategory" [(ngModel)]="time" name="category">
+                        <mat-option *ngFor="let category of categoryList" [value]="category.time">
+                            {{category.time}}
+                        </mat-option>
+                    </mat-select>
+                </div>
+            </mat-form-field>
+
+            <!-- Title -->
+            <mat-form-field appearance="fill" id="title t2">
+                <mat-label for="detailTopic">Title</mat-label>
+                <div>
+                    <input matInput formControlName="detailTopic" name="topic" id="topic" [(ngModel)]="topic"
+                        placeholder="Ex. Study">
+                </div>
+            </mat-form-field>
+            <!-- Time Picker -->
+            <mat-card-subtitle class="timefield">
+                <mat-divider></mat-divider>
+                <ngx-timepicker-field formControlName="timePick" [clockTheme]="greyTheme" [defaultTime]="'{{listItem}}'"
+                    [(ngModel)]="listItem">
+                </ngx-timepicker-field>
+                (Optional)
+            </mat-card-subtitle>
+
+
+            <!-- Description -->
+            <mat-card-subtitle for="editor" class="description">
+                Description
+            </mat-card-subtitle>
+
+            <quill-editor name="description" id="description" class="quill" formControlName="editor" [modules]="config"
+                [(ngModel)]="description">
+            </quill-editor>
+        </div>
+        <button class="btn" *ngIf="addMode" mat-raised-button color="primary">Add Task</button>
+        <button class="btn" *ngIf="editMode" mat-raised-button color="primary"
+            (click)="onSubmit2(); readMode()">Edit</button>
+        <button class="btn" mat-raised-button color="warn" (click)="readMode()">Cancel</button>
+    </form>
+
+</mat-card>
+
+<mat-card class="container c2" *ngIf="!editMode && !addMode" [ngStyle]="getColor()">
+    <!-- <mat-card-title [ngStyle]="getColor()" id="header">{{time}}</mat-card-title> -->
+    <mat-card-subtitle id="header">{{time}}</mat-card-subtitle>
+
+    <div class="card-body">
+
+        <mat-card-title id="title">{{topic}}
+            <span id="subTime" *ngIf="listItem && displayTime">{{listItem}}
+                <span id="e1" *ngIf="displayLate && listItem && displayTime">
+                    ({{displayTime}})
+                </span>
+                <span id="e2" *ngIf="!displayLate && listItem && displayTime">
+                    ({{displayTime}})
+                </span>
+            </span>
+            <mat-divider></mat-divider>
+        </mat-card-title>
+        <mat-card-content>
+            <p [innerHTML]="description"></p>
+        </mat-card-content>
+
+        <mat-card-subtitle *ngIf="!topic" class="blank">Click any item to see more...</mat-card-subtitle>
+    </div>
+</mat-card>
+
+
+
+<!-- 
+<div class="col-md-4 bg-light p-4">
+    <h3>Output</h3>
+</div>
+<p class="my-5" [innerHTML]="description"></p> -->

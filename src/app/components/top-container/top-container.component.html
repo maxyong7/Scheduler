@@ -1,0 +1,223 @@
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<mat-card-subtitle id="hint">
+    &#8595; (Hint: Double click to change theme) &#8595;</mat-card-subtitle>
+<!-- When its Day Time and over 30 Celcius Temperature -->
+<div *ngIf="(WeatherData.isDay && WeatherData.temp_feels_like>=30 && !allowLocation) || (allowLocation && themeSet == 'hot')"
+    class="container hot-day-container">
+    <!-- <div class="{{this.weatherData ? 'moon container' : 'container'}}"> -->
+    <!-- <div class="container"> -->
+    <div class="background" (dblclick)="changePreset()">
+        <div class="Circle1"></div>
+        <div class="Circle2"></div>
+        <div class="Circle3"></div>
+        <div class="content">
+            <h1 class="Condition">
+                <!-- <i class="material-icons sun">wb_sunny</i> Sunny -->
+
+                <div style="font-size: 14px; font-weight: 100;">
+                    Sunset at {{WeatherData.sunset_time}}</div>
+
+            </h1>
+            <!-- Celsius -->
+            <!-- <h1 class="Temp">{{WeatherData.temp_celcius}}&#8451;<span id="F"></span>
+                <div style="font-size: 16px;">Feels Like: {{WeatherData.temp_feels_like}}°
+                    <br>
+                    <div style="font-size: 14px;">
+                        {{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°
+
+                    </div>
+                </div>
+            </h1> -->
+            <!-- Farenheit -->
+            <h1 class="Temp">{{WeatherData.temp_farenheit}}&#x2109;<span id="F"></span>
+                <div style="font-size: 16px;">Feels Like: {{WeatherData.temp_feels_like_farenheit}}°
+                    <br>
+                    <div style="font-size: 14px;">
+                        {{WeatherData.temp_min_farenheit}}° / {{WeatherData.temp_max_farenheit}}°
+
+                    </div>
+                </div>
+            </h1>
+
+            <h1 class="Time">
+                {{hour}}:{{minute}}{{ampm}}
+
+            </h1>
+            <!-- <h1 class="Location"><i class="material-icons locationIcon">place</i> Raleigh, NC</h1> -->
+        </div>
+    </div>
+</div>
+
+
+<!-- If Night time -->
+
+<head>
+    <title>Twinkling Night Sky</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet">
+</head>
+
+<div *ngIf="(!WeatherData.isDay && !allowLocation) || (allowLocation && themeSet == 'night')" class="container">
+    <span (dblclick)="changePreset()">
+
+        <h1 class="TimeNight">
+            {{hour}}:{{minute}}{{ampm}}
+
+        </h1>
+        <!-- Celsius -->
+        <!-- <h1 class="Temp">{{WeatherData.temp_celcius}}&#8451;<span id="F"></span>
+            <div style="font-size: 16px;">Feels Like: {{WeatherData.temp_feels_like}}°
+                <br>
+                <div style="font-size: 14px;">
+                    {{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°
+
+                </div>
+            </div>
+        </h1> -->
+        <!-- Farenheit -->
+        <h1 class="Temp">{{WeatherData.temp_farenheit}}&#x2109;<span id="F"></span>
+            <div style="font-size: 16px;">Feels Like: {{WeatherData.temp_feels_like_farenheit}}°
+                <br>
+                <div style="font-size: 14px;">
+                    {{WeatherData.temp_min_farenheit}}° / {{WeatherData.temp_max_farenheit}}°
+
+                </div>
+            </div>
+        </h1>
+
+        <h1 class="Condition">
+
+            <div style="font-size: 14px; font-weight: 100;">
+                Sunrise at {{WeatherData.sunrise_time}} </div>
+        </h1>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+        <div class="title">
+            <h1>A Dark and Mysterious Night</h1>
+        </div>
+    </span>
+</div>
+
+<!-- If Day Time and Good Weather -->
+<div *ngIf="(WeatherData.isDay && WeatherData.temp_feels_like<30 && !allowLocation) || (allowLocation && themeSet == 'cool')"
+    class="container">
+    <span (dblclick)="changePreset()">
+        <h1 class="cooltime">
+            {{hour}}:{{minute}}{{ampm}}
+
+        </h1>
+        <!-- Celsius -->
+        <!-- <h1 class="coolTemp">{{WeatherData.temp_celcius}}&#8451;<span id="F"></span>
+            <div style="font-size: 16px;" class="coolText">Feels Like: {{WeatherData.temp_feels_like}}°
+                <br>
+                <div style="font-size: 14px;" class="coolText">
+                    {{WeatherData.temp_min}}° / {{WeatherData.temp_max}}°
+
+                </div>
+            </div>
+        </h1> -->
+        <!-- Farenheit -->
+        <h1 class="coolTemp">{{WeatherData.temp_farenheit}}&#x2109;<span id="F"></span>
+            <div style="font-size: 16px;" class="coolText">Feels Like: {{WeatherData.temp_feels_like_farenheit}}°
+                <br>
+                <div style="font-size: 14px;" class="coolText">
+                    {{WeatherData.temp_min_farenheit}}° / {{WeatherData.temp_max_farenheit}}°
+
+                </div>
+            </div>
+        </h1>
+
+        <h1 class="coolCondition">
+            Sunset at {{WeatherData.sunset_time}}
+        </h1>
+
+        <div class="css_lab">
+            <div class="cloud x2">
+                <div class="cloud x1"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="sea">
+                <p class="sun_set_sea"></p>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mountain1">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mountain2">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="mountain3">
+                <div></div>
+                <div></div>
+            </div>
+            <div class="bird">
+                <div class="bird1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="ship">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </span>
+</div>
+
+
+
+
+
+
+
+<!-- <div (onGetWeather)="setWeather($event)" class="{{this.weatherData ? 'moon container' : 'sun container'}}">
+    {{weatherData}}
+    <app-weather></app-weather>
+
+
+    <div class="date">
+
+        <h1 class="day">{{day}}</h1>
+        <h1 class="digitalTime">
+            {{hour}}:{{minute}}:{{second}}{{ampm}}
+        </h1>
+    </div>
+
+</div> -->

@@ -1,0 +1,29 @@
+.selection {
+    display: flex;
+}
+
+/* #description {
+    min-height: 4rem;
+    text-align: start;
+} */
+
+
+
+.btn {
+
+    float: left;
+    width: 50%;
+}
+
+
+#description {
+    min-height: 4rem
+}
+
+.title {
+    /* background-color: #f44336;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+}

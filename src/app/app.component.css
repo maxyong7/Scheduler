@@ -1,0 +1,81 @@
+/* bottom-container,time-space,time-slot,top-container */
+/* .app-top-container {
+    grid-area: top-container;
+}
+
+.app-time-slot {
+    grid-area: time-slot;
+}
+
+.app-time-space {
+    grid-area: time-space;
+}
+
+.app-bottom-container {
+    grid-area: bottom-container;
+} */
+
+/* GRID */
+
+/* .body {
+    border: transparent 2px solid;
+    padding: 0px;
+    display: grid;
+    grid-template-areas:
+        'top-container top-container top-container'
+        'time-slot time-space time-space'
+        'time-slot time-space time-space'
+        'time-slot time-space time-space'
+        'bottom-container bottom-container bottom-container';
+} */
+
+/* .top-container {
+    grid-area: top-container;
+    border: transparent 2px solid;
+}
+
+.time-slot {
+    grid-area: time-slot;
+    border: transparent 2px solid;
+}
+
+.time-space {
+    grid-area: time-space;
+    border: transparent 2px solid;
+}
+
+.bottom-container {
+    grid-area: bottom-container;
+    border: transparent 2px solid;
+} */
+
+/* END OF GRID */
+
+
+/* .header {
+    grid-area: top-container;
+}
+
+.main {
+    grid-area: time-slot;
+}
+
+.aside {
+    grid-area: time-space;
+}
+
+.footer {
+    grid-area: bottom-container;
+} */
+
+.mat-slider {
+    border: black 2px solid;
+    width: 300px;
+    color: black;
+}
+
+body {
+
+    transform: scale(1.1);
+    transform-origin: top;
+}

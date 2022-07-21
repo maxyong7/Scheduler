@@ -1,0 +1,37 @@
+<mat-card-header class="mat-title">
+
+    <div class="time-slot">
+        {{time.time}}
+    </div>
+</mat-card-header>
+<!-- <app-time-space-item *ngFor="let timeSlots of time.timeslot as s" [timeSlot]="timeSlots" [time]="s">
+
+</app-time-space-item> -->
+
+<app-time-space-item *ngFor="let items of timeSlotList" [timeslotsItems]="items" [parentId]="time.id"
+    (sendDelete)="filterTimeSlot($event)">
+</app-time-space-item>
+
+<!-- <div class="time-space" >{{refreshedTimeList ? refreshedTimeList.timeslot.topic: time.timeslot.topic }}</div> -->
+
+<!-- <app-time-space-item *ngFor="let timeItem in time.timeslot" [timeItem]="timeItem">{{time.timeslot.id}}
+</app-time-space-item> -->
+
+<!-- <app-time-space-item *ngFor="let timeItem in time.timeslot" [timeItem]="timeItem">{{time.timeslot.id}}
+</app-time-space-item> -->
+
+<!-- <div *ngFor="let timeItems of time">
+    <div *ngFor="let timeItem of timeItems.timeslot">{{timeItem.topic}}</div>
+</div> -->
+
+<!-- <app-time-space-item *ngFor="let timeItems of timeList">
+
+    <div *ngFor="let timeItem of timeItems.timeslot"> {{timeItem.topic}} </div>
+</app-time-space-item> -->
+<!-- <div *ngFor="let timeItem of time.timeslot">{{timeItem}}</div> -->
+
+<!-- <div class="mat-card-actions">
+    <button class="btn" mat-stroked-button color="primary" (click)="addTask()">Add Task</button>
+</div> -->
+
+<button class="btn" mat-stroked-button color="primary" (click)="addTask()">Add Task</button>

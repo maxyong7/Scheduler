@@ -1,0 +1,54 @@
+<form>
+    <!-- <div class="forms">
+        <mat-form-field appearance="fill" id="title">
+            <mat-label>Title</mat-label>
+            <input matInput name="task" id="task" [(ngModel)]="topic" placeholder="Ex. Study">
+        </mat-form-field>
+        
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <textarea matInput name="description" id="description" [(ngModel)]="description"
+                placeholder="Ex. English"></textarea>
+        </mat-form-field>
+        
+    </div> -->
+    <!-- <div class="form-control">
+        <label for="Task">Task</label><br>
+        <input type="text" name="task" id="task" [(ngModel)]="topic" placeholder="task">
+    </div> -->
+
+    <!-- <div class="form-control f2">
+        <label for="Description">Description</label><br>
+        <input type="text" name="description" id="description" [(ngModel)]="description" placeholder="description">
+    </div> -->
+    <!-- <div class="form-control">
+        <label for="to-Do">to-Do</label><br>
+        <input type="checkbox" name=listCheck [(ngModel)]="listCheck" id="listCheck">
+        <input type="text" name="listName" id="listName" [(ngModel)]="listItem" placeholder="to-do-list">
+    </div> -->
+    <h2 mat-dialog-title class="title">Delete task</h2>
+    <div mat-dialog-content>
+        <h3>
+            Are you sure to delete?</h3>
+    </div>
+
+    <div class="buttonBlock">
+
+        <!-- <div *ngIf="editRow; else newBlock" class="selection">
+            <button class="btn" mat-raised-button color="primary" mat-dialog-close="" (click)="onSubmit()">Edit</button>
+            <button class="btn" mat-raised-button color="warn" mat-dialog-close="">Cancel</button>
+        </div>
+        <ng-template #newBlock>
+            <button class="btn" mat-raised-button color="primary"
+                [mat-dialog-close]="returnDialogData()">Submit</button>
+            <button class="btn" mat-raised-button color="warn" mat-dialog-close="">Cancel</button>
+        </ng-template> -->
+
+        <div #newBlock>
+            <button class="btn" mat-raised-button color="warn" (click)="returnDialogData(true)">Delete</button>
+            <button class="btn" mat-raised-button color="basic" (click)="returnDialogData(false)">Cancel</button>
+        </div>
+    </div>
+
+</form>

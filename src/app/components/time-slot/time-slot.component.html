@@ -1,0 +1,39 @@
+<!-- <div *ngFor="let time of timeList" class="table">
+    <div class="time-slot">{{time.time}}</div>
+    <button class="btn mat-button" (click)="addTask()">Add Task</button>
+    <div class="time-space">{{refreshedTimeList ? refreshedTimeList.topic: time.topic }}</div>
+    <div>
+        <mat-icon matRipple (click)="onEdit(time)">edit</mat-icon>
+    </div>
+</div> -->
+
+<!-- 
+<div *ngFor="let time of timeList, let i = index" class="table">
+    {{time.time}}
+    {{timeSlotList[i].topic}}
+
+</div> -->
+<div class="container c0">
+
+    <div class="container c1">
+
+        <app-time-space id="style-2" *ngFor="let time of timeList; let index = index" [time]="time" class="table"
+            (sendDelete)="deleteTimeSlot($event)">
+        </app-time-space>
+    </div>
+
+    <div class="container c2">
+
+        <app-more-details></app-more-details>
+    </div>
+
+
+</div>
+
+
+<!-- <mat-table>
+
+    <app-time-space *ngFor="let time of timeList" [time]="time" [timeslotsItems]="timeSlotList" class="table"
+        (sendDelete)="deleteTimeSlot($event)">
+    </app-time-space>
+</mat-table> -->

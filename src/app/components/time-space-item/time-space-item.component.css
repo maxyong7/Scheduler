@@ -1,0 +1,111 @@
+.mat-icon {
+    cursor: pointer
+}
+
+
+.card {
+    opacity: 1;
+    /* min-height: 8em; */
+
+    height: 8em;
+
+    overflow-x: clip;
+    /* transition: .5s ease; */
+    /* backface-visibility: hidden; */
+    width: 15em;
+    /* float: left; */
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.mat-card-group {
+    position: relative;
+    /* background-color: rgb(19, 43, 252); */
+    background-color: white;
+
+}
+
+.nav-item:hover {
+    /* background-color: blue; */
+    cursor: pointer;
+}
+
+
+/* .mat-card-group:hover .card {
+    float: left;
+    transition: .5s ease;
+} */
+
+
+.c3 {
+    background-color: #ffdf6d;
+}
+
+.c4 {
+    bottom: 0%;
+    background-color: #f44336;
+    color: white
+}
+
+
+.btn {
+    /* width: 0%; */
+
+
+    /* position: absolute;
+    overflow: hidden; */
+    /* right: 0%; */
+    /* height: 50%; */
+
+    /* background-color: rgb(163, 124, 255); */
+    /* transition: .5s ease; */
+    height: 50%;
+
+
+
+
+}
+
+.overlay {
+    opacity: 0;
+    width: 0px;
+    height: 100%;
+    /* background-color: pink; */
+    /* float: right;
+    opacity: 30%; */
+    /* width: 0px; */
+    position: absolute;
+    padding: 0px;
+    top: 0px;
+    right: 0px;
+    transition: 0.4s;
+
+    /* transition: .5s ease; */
+}
+
+/* .overlay {
+    z-index: 0;
+    position: absolute;
+    min-width: 15em;
+    transition: .5s ease;
+    min-height: 8em;
+    display: block;
+} */
+
+.mat-card-group:hover .overlay {
+    width: 42px;
+    opacity: 1;
+    /* transition: .5s ease; */
+
+
+}
+
+.btn {
+    position: absolute;
+    min-width: 43px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.mat-card-group:hover {
+    box-shadow: inset 0px 0px 0px 1px rgb(75, 75, 75);
+}

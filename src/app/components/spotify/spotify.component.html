@@ -1,0 +1,129 @@
+<div class="container ">
+    <button *ngIf="!access_token" (load)="onPageLoad()" class="connect" mat-button routerLink="/callbacks"
+        (click)="requestAuthorization()">Connect
+        to<img id='spotify_logo' src="../../../assets/Spotify_Logo_RGB_Black.png" alt="image"></button>
+
+
+</div>
+
+<div *ngIf="access_token" (load)="onPageLoad()" id="deviceSection" class="c0">
+
+    <!-- <div class="mb-3">
+        <label for="devices" class="form-label">Devices</label>
+        <select id="devices" class="form-control">
+        </select>
+        <input class="btn btn-primary btn-sm mt-3" type="button" (click)="refreshDevices()" value="Refresh Devices">
+        <input type="button" class="btn btn-dark btn-sm  mt-3" (click)="transfer()" value="Transfer">
+    </div> -->
+
+    <!-- <div class="row  mt-3">
+        <div class="col">
+            <h1> Currently Playing</h1>
+            <input type="button" class="btn btn-primary btn-sm mt-3" (click)="currentlyPlaying()"
+                    value="What's playing right now?">
+            <div *ngIf="currentPlayingTitle">
+                <img id="albumImage" src="{{currentPlayingImage}}">
+                <div id="trackTitle">{{currentPlayingTitle}}</div>
+                <div id="trackArtist">{{currentPlayingArtist}}</div>
+            </div>
+            <div *ngIf="!currentPlayingTitle">
+                <img id="albumImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+                    <div id="notrackTitle">Please play a song on Spotify first</div>
+                    <div id="notrackArtist">No Artist</div>
+            </div>
+
+        </div>
+    </div> -->
+    <div class="row">
+        <!-- <div class="col col0">
+            <mat-icon>noise_aware</mat-icon>
+        </div> -->
+
+        <div class="songInfo col col1" *ngIf="currentPlayingTitle">
+            <div>
+                <div (click)="goToLink(currentPlayingTitleUrl)" class="trackTitle">{{currentPlayingTitle}} </div>
+                <small (click)="goToLink(currentPlayingArtistUrl)" class="trackArtist">{{currentPlayingArtist}}</small>
+            </div>
+            <div class="image">
+                <img (click)="goToLink(currentPlayingImageUrl)" id="albumImage" src="{{currentPlayingImage}}">
+            </div>
+
+
+        </div>
+
+        <div class="songInfo col col1" *ngIf="!currentPlayingTitle">
+            <div>
+                <div class="trackTitle">
+                    No Title
+                </div>
+                <small class="trackArtist">No Artist</small>
+            </div>
+            <div class=" image">
+                <img id="albumImage" src="{{currentPlayingImage}}">
+                <mat-icon>image_not_supported</mat-icon>
+
+            </div>
+
+
+        </div>
+
+        <div class="col col2" (click)="delayedCurrentlyPlaying(500)">
+
+            <button mat-button (click)="previous()">
+                <mat-icon>skip_previous</mat-icon>
+            </button>
+            <button mat-mini-fab class="playPauseButton" *ngIf="!playPause" (click)="play()">
+                <mat-icon #playButton>play_arrow</mat-icon>
+            </button>
+            <button mat-mini-fab class="playPauseButton" *ngIf="playPause" (click)="pause()">
+                <mat-icon>pause</mat-icon>
+            </button>
+            <button mat-button (click)="next()">
+                <mat-icon>skip_next</mat-icon>
+            </button>
+            <!-- <button mat-stroked-button (click)="shuffle()">
+                <mat-icon>shuffle</mat-icon>
+            </button> -->
+            <!-- 
+            <input type="button" class="btn btn-dark" (click)="previous()" value="Prev">
+            <input type="button" class="btn btn-dark" (click)="play()" value="Play">
+
+            <input type="button" class="btn btn-dark" (click)="shuffle()" value="Shuffle">
+            <input type="button" class="btn btn-dark" (click)="pause()" value="Pause">
+            <input type="button" class="btn btn-dark" (click)="next()" value="Next"> -->
+
+
+
+        </div>
+
+        <div class="col col3">
+            <mat-icon>volume_down_alt</mat-icon>
+            <mat-slider class="slider" #slider [(ngModel)]="value"
+                (change)="updateSound(slider.displayValue); currentlyPlaying(false)" [displayWith]="formatLabel"
+                tickInterval="1" step="1" min="0" max="100" aria-label="units">
+            </mat-slider>
+            <div class="volumeDisplay">{{slider.displayValue}}</div>
+
+            <mat-form-field appearance="fill" (focus)="refreshDevices()" class="form-field">
+                <mat-label class="form-field-text" (focus)="refreshDevices()">Select a Device</mat-label>
+                <mat-select (focus)="refreshDevices()">
+                    <mat-option *ngFor="let device of deviceList" [value]="device.name" (click)="transfer(device.id)">
+                        {{device.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+
+        <div class="col col0">
+
+            <img (click)="goToLink('//play.spotify.com')" id='spotify_logo2'
+                src="../../../assets/Spotify_Icon_RGB_Green.png" alt="image">
+        </div>
+
+
+
+    </div>
+
+
+</div>
