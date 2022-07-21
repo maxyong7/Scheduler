@@ -1,4 +1,4 @@
-Link to [demo](https://maxyong.com/)
+
 
 ### <ins> Scheduler to plan out priorities throughout the day
 - Utilized: <br/> 
@@ -11,3 +11,5 @@ It can:
 > 3. **Add**, **Delete** or **Edit** task 
 > 4. **See more information** by clicking each task
 > 5. Connect to Spotify to **play, skip previous/next, switch devices**, and **show currently playing track**
+
+(See [demo](https://maxyong.com/))
